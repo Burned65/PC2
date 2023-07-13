@@ -166,20 +166,20 @@ PPMImage* extract_image_part(PPMImage* image, int min_height, int max_height, in
 
 
 int main() {
-    PPMImage* image = read_ppm_file((char*)"C:\\Users\\bach0\\CLionProjects\\PC2\\a.ppm");
+    PPMImage* image = read_ppm_file((char*)"a.ppm");
     PPMImage* inverted_image = invert_color(image);
-    image = read_ppm_file((char*)"C:\\Users\\bach0\\CLionProjects\\PC2\\a.ppm");
+    image = read_ppm_file((char*)"a.ppm");
     PPMImage* brightened_image = brighten_image(image, 100);
-    image = read_ppm_file((char*)"C:\\Users\\bach0\\CLionProjects\\PC2\\a.ppm");
+    image = read_ppm_file((char*)"a.ppm");
     PPMImage* flipped_image = flip_image(image);
-    image = read_ppm_file((char*)"C:\\Users\\bach0\\CLionProjects\\PC2\\a.ppm");
+    image = read_ppm_file((char*)"a.ppm");
     PPMImage* rotated_image = rotate_image(image);
-    image = read_ppm_file((char*)"C:\\Users\\bach0\\CLionProjects\\PC2\\a.ppm");
+    image = read_ppm_file((char*)"a.ppm");
     PPMImage* extracted_image = extract_image_part(image, 50, 186, 300, 400);
-    write_ppm_file((char*)"C:\\Users\\bach0\\CLionProjects\\PC2\\inverted_image.ppm", inverted_image);
-    write_ppm_file((char*)"C:\\Users\\bach0\\CLionProjects\\PC2\\brightened_image.ppm", brightened_image);
-    write_ppm_file((char*)"C:\\Users\\bach0\\CLionProjects\\PC2\\flipped_image.ppm", flipped_image);
-    write_ppm_file((char*)"C:\\Users\\bach0\\CLionProjects\\PC2\\rotated_image.ppm", rotated_image);
-    write_ppm_file((char*)"C:\\Users\\bach0\\CLionProjects\\PC2\\extracted_image.ppm", extracted_image);
+    write_ppm_file((char*)"inverted_image.ppm", inverted_image);
+    write_ppm_file((char*)"brightened_image.ppm", brightened_image);
+    write_ppm_file((char*)"flipped_image.ppm", flipped_image);
+    write_ppm_file((char*)"rotated_image.ppm", rotated_image);
+    write_ppm_file((char*)"extracted_image.ppm", extracted_image);
     return 0;
 }
